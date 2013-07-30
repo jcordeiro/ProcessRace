@@ -9,7 +9,7 @@
 #include <time.h>
 #include <signal.h>
 
-#define PIPE_NAME "/tmp/jonathancordeiro_a2"
+#define PIPE_NAME "NAME_OF_PIPE"
 
 // Function prototypes
 void writeColours(int, char*);
@@ -146,12 +146,12 @@ void printProgress(int nbrOfRed, int nbrOfGreen, int nbrOfBlue)
 	int firstNum, secondNum, thirdNum;
 
 	// Determine which process is in first placse
-	if (nbrOfRed > nbrOfGreen && nbrOfRed > nbrOfBlue)
+	if ( (nbrOfRed > nbrOfGreen) && (nbrOfRed > nbrOfBlue) )
 	{
 		first = "Red";
 		firstNum = nbrOfRed;
 	} 
-	else if (nbrOfGreen > nbrOfRed && nbrOfGreen > nbrOfBlue)
+	else if ( (nbrOfGreen > nbrOfRed) && (nbrOfGreen > nbrOfBlue) )
 	{
 		first = "Green";
 		firstNum = nbrOfGreen;
@@ -163,12 +163,12 @@ void printProgress(int nbrOfRed, int nbrOfGreen, int nbrOfBlue)
 	}
 
 	// Determine which process is in second place
-	if (nbrOfRed > nbrOfGreen && nbrOfRed < nbrOfBlue || nbrOfRed < nbrOfGreen && nbrOfRed > nbrOfBlue )
+	if ( ((nbrOfRed > nbrOfGreen)) && (nbrOfRed < nbrOfBlue)) || ((nbrOfRed < nbrOfGreen) && (nbrOfRed > nbrOfBlue)) )
 	{
 		second = "Red";
 		secondNum = nbrOfRed;
 	} 
-	else if (nbrOfGreen > nbrOfRed && nbrOfGreen < nbrOfBlue || nbrOfGreen < nbrOfRed && nbrOfGreen > nbrOfBlue )
+	else if ( ((nbrOfGreen > nbrOfRed) && (nbrOfGreen < nbrOfBlue)) || ((nbrOfGreen < nbrOfRed) && (nbrOfGreen > nbrOfBlue)) )
 	{
 		second = "Green";
 		secondNum = nbrOfGreen;
@@ -180,12 +180,12 @@ void printProgress(int nbrOfRed, int nbrOfGreen, int nbrOfBlue)
 	}
 
 	// Determine which process is in third place
-	if (nbrOfRed < nbrOfGreen && nbrOfRed < nbrOfBlue)
+	if ((nbrOfRed < nbrOfGreen) && (nbrOfRed < nbrOfBlue))
 	{
 		third = "Red";
 		thirdNum = nbrOfRed;
 	} 
-	else if (nbrOfGreen < nbrOfRed && nbrOfGreen < nbrOfBlue)
+	else if ((nbrOfGreen < nbrOfRed) && (nbrOfGreen < nbrOfBlue))
 	{
 		third = "Green";
 		thirdNum = nbrOfGreen;
