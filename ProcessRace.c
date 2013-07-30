@@ -163,7 +163,7 @@ void printProgress(int nbrOfRed, int nbrOfGreen, int nbrOfBlue)
 	}
 
 	// Determine which process is in second place
-	if ( ((nbrOfRed > nbrOfGreen)) && (nbrOfRed < nbrOfBlue)) || ((nbrOfRed < nbrOfGreen) && (nbrOfRed > nbrOfBlue)) )
+	if ( ((nbrOfRed > nbrOfGreen) && (nbrOfRed < nbrOfBlue)) || ((nbrOfRed < nbrOfGreen) && (nbrOfRed > nbrOfBlue)) )
 	{
 		second = "Red";
 		secondNum = nbrOfRed;
